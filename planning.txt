@@ -1,0 +1,29 @@
+What is this project:
+	Have a trello like app. However, where Trello has cards that only show one thing, this app will have cards that you can click on a button that shows more steps. For example: A card in the todo list can say implement GUI, a button on the card can say to expand and that can have more cards that have more specific actions like add start button.
+
+
+	Planning:
+		Board: 
+			What it needs:
+				Title
+				Array/ArrayList of lists
+				Color/ background
+			It will be the main panel 
+		Lists: 
+			What it needs:
+				Title:
+				Different color
+				Array/arrayList of cards
+				Add new Card button
+		Cards:
+			What it needs:	
+				Title
+				Flag
+				Description
+				Delete button
+				Expand button
+
+	What to do:
+		Create a main panel
+
+

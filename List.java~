@@ -1,0 +1,16 @@
+import javax.swing.*;
+import java.awt.Event.*;
+import java.awt.*;
+
+
+public class List {
+  public String title;
+  public JPanel listPanel;
+  
+  public void build(){
+    listPanel = new JPanel();
+    
+    JScrollPane listPane = new JScrollPane(listPanel);
+  }
+  
+}
