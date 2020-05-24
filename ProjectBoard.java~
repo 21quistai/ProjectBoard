@@ -21,7 +21,7 @@ public class ProjectBoard {
   public void build (){
     frame = new JFrame ("Board");
     mainPanel = new JPanel();
-    mainPanel.setBackground(Color.blue);
+    
     //board
     buildBoard();
     buildOptions();
@@ -31,8 +31,7 @@ public class ProjectBoard {
     
     frame.getContentPane().add(mainPanel);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //frame.setSize(900,600);
-    frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+    frame.setSize(900,600);
     frame.setVisible(true);
   }
   
@@ -45,12 +44,10 @@ public class ProjectBoard {
     boardPanel.add(addListButton);
     
     JScrollPane boardScroll = new JScrollPane (boardPanel);
-    boardScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+    boardScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
     boardScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
     mainPanel.add(BorderLayout.WEST, boardScroll);
   }
-  /** The option panel 
-    * Creates a new panel, adds a save button*/
   
   public void buildOptions(){
     optionsPanel = new JPanel();
@@ -61,16 +58,13 @@ public class ProjectBoard {
     mainPanel.add(BorderLayout.EAST, optionsPanel);
   }
   
-  /** Creates a new List when the AddlistButton is pressed
-    * Creates a new List, adds it to the Listslist, 
-    * displays it, refreshes the panel*/
-  
   public class AddListButtonListener implements ActionListener{
     public void actionPerformed(ActionEvent ev){
       List newList = new List();
       listslist.add(newList);
       boardPanel.add(newList.build());
-      boardPanel.revalidate();
+      System.out.println("HELLO");
+      System.out.println(listslist.size());
     }
   }
   
